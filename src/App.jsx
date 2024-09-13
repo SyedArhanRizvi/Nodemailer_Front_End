@@ -11,7 +11,7 @@ function App() {
   const emailHandler = async (e) =>{
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3000/emailSend", {name, mail, phone, msg});
+      const res = await axios.post("https://backe-end-nodemailer.onrender.com/emailSend", {name, mail, phone, msg});
       console.log(res)
       if(res.data.success == true) {
         toast.success("Email has been send successfully");
